@@ -1,8 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { AppRegistry, View, Text } from 'react-native';
+import App from './app';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<div>Hello world</div>, document.getElementById('root'));
+AppRegistry.registerComponent('App', () => App);
+
+AppRegistry.runApplication('App', {
+  initialProps: {},
+  rootTag: document.getElementById('root')
+});
 
 serviceWorker.unregister();
